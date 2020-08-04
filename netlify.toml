@@ -1,0 +1,780 @@
+[context.deploy-preview]
+command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+
+[Settings]
+
+[[headers]]
+  for = "/nl/*"
+  [headers.values]
+    Content-Language = "nl"
+
+[[headers]]
+  for = "/en/*"
+  [headers.values]
+    Content-Language = "en"
+
+[[headers]]
+  for = "/be/*"
+  [headers.values]
+    Content-Language = "nl-BE"
+
+[[headers]]
+  for = "/de/*"
+  [headers.values]
+    Content-Language = "de"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+
+
+[[redirects]]
+  from = "https://clubcollect.netlify.com/*"
+  to = "https://www.clubcollect.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://clubbase.io/*"
+  to = "https://www.clubcollect.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.clubbase.io/*"
+  to = "https://www.clubcollect.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://clubcollect.de/*"
+  to = "https://www.clubcollect.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.clubcollect.de/*"
+  to = "https://www.clubcollect.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://clubcollectmail.com/*"
+  to = "https://clubcollect.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.clubcollectmail.com/*"
+  to = "https://www.clubcollect.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://clubcollect.nl/*"
+  to = "https://clubcollect.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.clubcollect.nl/*"
+  to = "https://www.clubcollect.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://nlcollect.nl/*"
+  to = "https://clubcollect.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.nlcollect.nl/*"
+  to = "https://www.clubcollect.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://nlcollect.com/*"
+  to = "https://clubcollect.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.nlcollect.com/*"
+  to = "https://www.clubcollect.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://paypool.com/*"
+  to = "https://clubcollect.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.paypool.com/*"
+  to = "https://www.clubcollect.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.clubcollect.com/ie/*"
+  to = "https://www.clubcollect.com/en/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.clubcollect.com/nl/landing/webinars/"
+  to = "https://www.clubcollect.com/nl/webinars"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/code"
+  to = "https://app.clubcollect.com/member/signin/code"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/*/code"
+  to = "https://app.clubcollect.com/member/:splat/signin/code"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/brief"
+  to = "https://app.clubcollect.com/member/signin/letter"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/*/brief"
+  to = "https://app.clubcollect.com/member/:splat/signin/letter"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/letter"
+  to = "https://app.clubcollect.com/member/signin/letter"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/*/letter"
+  to = "https://app.clubcollect.com/member/:splat/signin/letter"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/:locale/email/:code"
+  to = "https://app.clubcollect.com/member/:locale/verification/email/:code"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/email/:code"
+  to = "https://app.clubcollect.com/member/verification/email/:code"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/:locale/email"
+  to = "https://app.clubcollect.com/member/:locale/verification/email"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/email"
+  to = "https://app.clubcollect.com/member/verification/email"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/:locale/sms/:code"
+  to = "https://app.clubcollect.com/member/:locale/verification/sms/:code"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sms/:code"
+  to = "https://app.clubcollect.com/member/verification/sms/:code"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/:locale/sms"
+  to = "https://app.clubcollect.com/member/:locale/verification/sms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sms"
+  to = "https://app.clubcollect.com/member/verification/sms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/info"
+  to = "https://www.clubcollect.com/nl/starten"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/legal/privacy_statement"
+  to = "https://www.clubcollect.com/en/legal#ccprivacy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/legal/privacy_statement"
+  to = "https://www.clubcollect.com/nl/juridisch/#ccprivacy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/legal/privacy_statement"
+  to = "https://www.clubcollect.com/de/agb/#privacy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/legal/terms_of_service"
+  to = "https://www.clubcollect.com/en/legal/#ccterms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/legal/terms_of_service"
+  to = "https://www.clubcollect.com/nl/juridisch/#ccterms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/legal/terms_of_service"
+  to = "https://www.clubcollect.com/de/agb/#ccterms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/legal/*"
+  to = "https://www.clubcollect.com/nl/juridisch"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/legal/*"
+  to = "https://www.clubcollect.com/de/agb"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/about"
+  to = "https://www.clubcollect.com/en/about-us"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/about"
+  to = "https://www.clubcollect.com/nl/over-ons"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/about"
+  to = "https://www.clubcollect.com/de/uber-uns"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/about-us"
+  to = "https://www.clubcollect.com/nl/over-ons"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/about-us"
+  to = "https://www.clubcollect.com/de/uber-uns"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/clubs"
+  to = "https://www.clubcollect.com/en/invoicing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/clubs"
+  to = "https://www.clubcollect.com/nl/facturatie"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/clubs"
+  to = "https://www.clubcollect.com/de/rechnungsstellung"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/contact"
+  to = "https://www.clubcollect.com/de/kontakt"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/contact-us"
+  to = "https://www.clubcollect.com/en/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/contact-us"
+  to = "https://www.clubcollect.com/nl/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/contact-us"
+  to = "https://www.clubcollect.com/de/kontakt"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/home"
+  to = "https://www.clubcollect.com/en/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/home"
+  to = "https://www.clubcollect.com/nl/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/home"
+  to = "https://www.clubcollect.com/de"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/jobs"
+  to = "https://www.clubcollect.com/en/hiring"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/jobs"
+  to = "https://www.clubcollect.com/nl/vacatures"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/jobs"
+  to = "https://www.clubcollect.com/de/stellenangebote"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/members"
+  to = "https://www.clubcollect.com/en/invoicing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/members"
+  to = "https://www.clubcollect.com/nl/facturatie"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/members"
+  to = "https://www.clubcollect.com/de/rechnungsstellung"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/partners"
+  to = "https://www.clubcollect.com/en"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/partners"
+  to = "https://www.clubcollect.com/nl"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/partners"
+  to = "https://www.clubcollect.com/de"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/foundation"
+  to = "https://www.clubcollect.com/en/invoicing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/foundation"
+  to = "https://www.clubcollect.com/nl/facturatie"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/foundation"
+  to = "https://www.clubcollect.com/de/rechnungsstellung"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/press-kit"
+  to = "https://www.clubcollect.com/en"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/press-kit"
+  to = "https://www.clubcollect.com/nl"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/press-kit"
+  to = "https://www.clubcollect.com/de"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/presskit"
+  to = "https://www.clubcollect.com/en"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/presskit"
+  to = "https://www.clubcollect.com/nl"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/presskit"
+  to = "https://www.clubcollect.com/de"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/faq"
+  to = "https://www.clubcollect.com/en/pricing/#pricing-faq"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/faq"
+  to = "https://www.clubcollect.com/nl/prijzen/#pricing-faq"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/faq"
+  to = "https://www.clubcollect.com/de/preise/#pricing-faq"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/registration"
+  to = "https://www.clubcollect.com/en/get-started"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/registration"
+  to = "https://www.clubcollect.com/nl/starten"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/registration"
+  to = "https://www.clubcollect.com/de/kostenlostesten"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/security"
+  to = "https://www.clubcollect.com/nl/veiligheid"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/security"
+  to = "https://www.clubcollect.com/de/sicherheit"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/testimonials"
+  to = "https://www.clubcollect.com/en/our-clients"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/testimonials"
+  to = "https://www.clubcollect.com/nl/onze-klanten"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/testimonials"
+  to = "https://www.clubcollect.com/de/unsere-kunden"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/tour"
+  to = "https://www.clubcollect.com/en/invoicing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/tour"
+  to = "https://www.clubcollect.com/nl/facturatie"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/tour"
+  to = "https://www.clubcollect.com/de/rechnungsstellung"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/welcome-sport"
+  to = "https://www.clubcollect.com/en"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/welcome-sport"
+  to = "https://www.clubcollect.com/nl"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/welcome-sport"
+  to = "https://www.clubcollect.com/de"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/welkom-scholen"
+  to = "https://www.clubcollect.com/en"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/welkom-scholen"
+  to = "https://www.clubcollect.com/nl"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/welkom-scholen"
+  to = "https://www.clubcollect.com/de"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/welkom-hockey"
+  to = "https://www.clubcollect.com/en"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/welkom-hockey"
+  to = "https://www.clubcollect.com/nl"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/welkom-hockey"
+  to = "https://www.clubcollect.com/de"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/ambassador"
+  to = "https://www.clubcollect.com/en/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/ambassador"
+  to = "https://www.clubcollect.com/nl/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/ambassador"
+  to = "https://www.clubcollect.com/de/kontakt"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/demo-account"
+  to = "https://www.clubcollect.com/en/get-started"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/demo-account"
+  to = "https://www.clubcollect.com/nl/starten"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/demo-account"
+  to = "https://www.clubcollect.com/de/kostenlostesten"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/clubbase-kosten"
+  to = "https://www.knltb.club/#prijzen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/clubbase-kosten"
+  to = "https://www.knltb.club/#prijzen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/clubbase-kosten"
+  to = "https://www.knltb.club/#prijzen"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/responsibledisclosure"
+  to = "https://www.clubcollect.com/en/responsible-disclosure/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nl/responsibledisclosure"
+  to = "https://www.clubcollect.com/nl/responsible-disclosure/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/de/responsibledisclosure"
+  to = "https://www.clubcollect.com/de/verantwortlichkeitserklarung/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/language/en"
+  to = "https://www.clubcollect.com/en"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/language/nl"
+  to = "https://www.clubcollect.com/nl"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/language/de"
+  to = "https://www.clubcollect.com/de"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/*"
+  to = "/en/404.html"
+  status = 404
+  force = false
+
+[[redirects]]
+  from = "/nl/*"
+  to = "/nl/404.html"
+  status = 404
+  force = false
+
+[[redirects]]
+  from = "/be/*"
+  to = "/be/404.html"
+  status = 404
+  force = false
+
+[[redirects]]
+  from = "/de/*"
+  to = "/de/404.html"
+  status = 404
+  force = false
+
+[[redirects]]
+  from = "/legal/privacy_statement.html"
+  to = "https://www.clubcollect.com/nl/legal/#ccprivacy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/legal/terms_of_service.html"
+  to = "https://www.clubcollect.com/nl/legal#ccterms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/"
+  to = "/nl/"
+  status = 302
+  force = true
+  conditions = {Country = ["nl"]}
+
+[[redirects]]
+  from = "/"
+  to = "/be/"
+  status = 302
+  force = true
+  conditions = {Country = ["be"]}
+
+[[redirects]]
+  from = "/"
+  to = "/nl/"
+  status = 302
+  force = true
+  conditions = {Language = ["nl"]}
+
+[[redirects]]
+  from = "/"
+  to = "/de/"
+  status = 302
+  force = true
+  conditions = {Country = ["de,at,ch"]}
+
+[[redirects]]
+  from = "/"
+  to = "/de/"
+  status = 302
+  force = true
+  conditions = {Language = ["de"]}
+
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+  force = false
+
+[[redirects]]
+  from = "/*"
+  to = "/nl/404.html"
+  status = 404
+  force = false
