@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Forms - Shop</title>
+    <script src='https://app-clubcollect-stag-pr-9809.autoidleapp.com/widgets.js'></script>
+  </head>
+  <body style="background: #f7f8fa; text-align: center;">
+    <div style="display: inline-block; width: 1000px; margin: 50px;">
+      <div>
+        <script>
+          var shop_path = location.pathname;
+          if (shop_path == '/')
+            shop_path = "clubcollect-test-clu/clubcollect-online-shop";
+          if (!shop_path.match(/^(nl|de|be)/))
+            shop_path = "en/" + shop_path;
+          document.write('<clubcollect-widget url="https://app-clubcollect-stag-pr-9809.autoidleapp.com" type="shop" path="'+shop_path+'"></clubcollect-widget>');
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
