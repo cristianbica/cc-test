@@ -10,7 +10,7 @@
           var shop_path = location.pathname;
           if (shop_path == '/')
             shop_path = "clubcollect-test-clu/clubcollect-online-shop";
-          if (!shop_path.match(/^(nl|de|be)/))
+          if (!shop_path.match(/^\/(en|nl|de|be)\//))
             shop_path = "en/" + shop_path;
           document.write('<clubcollect-widget url="https://app-clubcollect-stag-pr-9809.autoidleapp.com" type="shop" path="'+shop_path+'"></clubcollect-widget>');
         </script>
